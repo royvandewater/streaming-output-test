@@ -1,5 +1,7 @@
 version: 2.1
 
+I bet a string shouldn't go here
+
 jobs:
   build:
     docker:
