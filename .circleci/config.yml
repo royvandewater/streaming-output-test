@@ -1,23 +1,25 @@
-version: 2.1
+
+version: 2
 
 jobs:
-  build:
+  test-output:
     docker:
-      - image: bash:5.0.7
+    - image: circleci/python:2.7-stretch
     steps:
-      - checkout
-      - run: ./main.sh
-  build2:
+    - checkout
+    - run: sleep 120
+    - run: echo "✅"
+  test-waiting:
     docker:
-      - image: bash:5.0.7
+    - image: circleci/python:2.7-stretch
     steps:
-      - checkout
-      - run: ./main.sh
+    - checkout
 
 workflows:
+  version: 2
   test:
     jobs:
-      - build
-      - build2:
-          requires:
-            - build
+    - test-output
+    - test-waiting:
+        requires:
+          - test-output
