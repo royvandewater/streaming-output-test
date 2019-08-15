@@ -7,12 +7,6 @@ jobs:
     steps:
       - checkout
       - run: ./main.sh
-  build2:
-    docker:
-      - image: bash:5.0.7
-    steps:
-      - checkout
-      - run: ./main.sh
 
 workflows:
   test:
