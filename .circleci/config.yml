@@ -6,7 +6,7 @@ jobs:
       - image: bash:5.0.7
     steps:
       - checkout
-      - run: ./main.sh
+      - run: cat output
 
 workflows:
   test:
