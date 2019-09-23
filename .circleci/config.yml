@@ -1,17 +1,9 @@
 version: 2.1
 
-I bet a string shouldn't go here
-
 jobs:
   build:
     docker:
-      - image: bash:5.0.7
-    steps:
-      - checkout
-      - run: ./main.sh
-  build2:
-    docker:
-      - image: bash:5.0.7
+      image: bash:5.0.7
     steps:
       - checkout
       - run: ./main.sh
@@ -20,6 +12,3 @@ workflows:
   test:
     jobs:
       - build
-      - build2:
-          requires:
-            - build
