@@ -11,4 +11,8 @@ jobs:
 workflows:
   test:
     jobs:
-      - build
+      - my-approval-job:
+          type: approval
+      - build:
+          requires:
+            - my-approval-job
