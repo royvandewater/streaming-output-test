@@ -11,4 +11,10 @@ jobs:
 workflows:
   test:
     jobs:
-      - build
+      - build:
+          filters:
+            branches:
+              only: /.*/
+            tags:
+              only: /.*/
+
