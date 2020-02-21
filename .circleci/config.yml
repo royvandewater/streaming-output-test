@@ -12,6 +12,42 @@ jobs:
       - run: ./main.sh
       - run: ./main.sh
       - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
+      - run: ./main.sh
 
 workflows:
   test:
