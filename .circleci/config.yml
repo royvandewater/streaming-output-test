@@ -6,6 +6,8 @@ jobs:
       - image: bash:5.0.7
     steps:
       - checkout
+      - setup_remote_docker:
+        docker_layer_caching: true
       - run: ./main.sh
 
 workflows:
