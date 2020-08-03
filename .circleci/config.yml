@@ -1,14 +1,76 @@
 version: 2.1
 
 jobs:
-  build:
+  build1:
     docker:
       - image: bash:5.0.7
     steps:
       - checkout
       - run: ./main.sh
-
+  build2:
+    docker:
+      - image: bash:5.0.7
+    steps:
+      - checkout
+      - run: ./main.sh
+  build3:
+    docker:
+      - image: bash:5.0.7
+    steps:
+      - checkout
+      - run: ./main.sh
+  build4:
+    docker:
+      - image: bash:5.0.7
+    steps:
+      - checkout
+      - run: ./main.sh
+  build5:
+    docker:
+      - image: bash:5.0.7
+    steps:
+      - checkout
+      - run: ./main.sh
+  build6:
+    docker:
+      - image: bash:5.0.7
+    steps:
+      - checkout
+      - run: ./main.sh
+  build7:
+    docker:
+      - image: bash:5.0.7
+    steps:
+      - checkout
+      - run: ./main.sh
+  build8:
+    docker:
+      - image: bash:5.0.7
+    steps:
+      - checkout
+      - run: ./main.sh
+  build9:
+    docker:
+      - image: bash:5.0.7
+    steps:
+      - checkout
+      - run: ./main.sh
+  build10:
+    docker:
+      - image: bash:5.0.7
+    steps:
+      - checkout
+      - run: ./main.sh
 workflows:
   test:
     jobs:
-      - build
+      - build1
+      - build2
+      - build3
+      - build4
+      - build5
+      - build6
+      - build7
+      - build8
+      - build9
+      - build10
