@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
 main(){
-  exit 1
+  exit 0
 }
 main "$@"
