@@ -5,6 +5,5 @@ main(){
     echo "$i"
     sleep 1
   done
-  exit 1
 }
 main "$@"
