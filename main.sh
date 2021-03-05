@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
 main(){
-  for i in {0..200}; do
-    echo "$i"
-    sleep 1
-  done
+  local exit_code
+
+  exit_code=$(($RANDOM % 2))
+  echo "exiting with exit_code: $exit_code"
+  exit $exit_code
 }
 main "$@"
