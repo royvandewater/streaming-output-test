@@ -1,0 +1,5 @@
+{
+  "all": true,
+  "check-coverage": false,
+  "exclude": ["*-spec.js"]
+}

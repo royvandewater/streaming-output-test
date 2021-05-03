@@ -3,10 +3,13 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: bash:5.0.7
+      - image: cimg/node:14.15.4
     steps:
       - checkout
-      - run: ./main.sh
+      - run: yarn install
+      - run: yarn test:coverage
+      - store_artifacts:
+          path: coverage
 
 workflows:
   test:
