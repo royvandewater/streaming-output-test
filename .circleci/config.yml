@@ -12,7 +12,7 @@ workflows:
   test:
     jobs:
       - build:
-          filter:
+          filters:
             branches:
               ignore:
                 - try-adding-a-tag
