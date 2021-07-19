@@ -8,7 +8,3 @@ jobs:
       - checkout
       - run: ./main.sh
 
-workflows:
-  test:
-    jobs:
-      - build
