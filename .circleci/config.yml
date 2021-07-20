@@ -1,5 +1,8 @@
 version: 2.1
 
+orbs:
+  slack: circleci/slack@4.4.2
+
 jobs:
   build:
     docker:
@@ -7,8 +10,10 @@ jobs:
     steps:
       - checkout
       - run: ./main.sh
+      - slack/notify
 
 workflows:
   test:
     jobs:
-      - build
+      - build:
+          context: slack-bot-token
