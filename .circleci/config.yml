@@ -1,5 +1,4 @@
 version: 2.1
-
 jobs:
   build:
     docker:
@@ -7,8 +6,17 @@ jobs:
     steps:
       - checkout
       - run: ./main.sh
-
+  scan_dependencies:
+    docker:
+      - image: cimg/base:2021.07-20.04
+    steps:
+      - snyk/scan
 workflows:
   test:
     jobs:
       - build
+      - scan_dependencies:
+          requires:
+            - build
+orbs:
+  snyk: snyk/snyk@1.0.1
