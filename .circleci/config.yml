@@ -10,7 +10,8 @@ jobs:
     steps:
       - checkout
       - run: ./main.sh
-      - slack/notify
+      - slack/notify:
+          template: basic_success_1
 
 workflows:
   test:
