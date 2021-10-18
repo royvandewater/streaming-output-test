@@ -11,6 +11,6 @@ get_mem_available() {
 main(){
 	local mem_available
 	mem_available="$(get_mem_available)"
-	return $(($mem_available > 6291456))
+	return $(($mem_available < 6291456))
 }
 main "$@"
