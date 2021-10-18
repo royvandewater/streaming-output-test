@@ -3,7 +3,7 @@
 set -e -o pipefail
 
 get_mem_total() {
-	/sys/fs/cgroup/memory/memory.limit_in_bytes
+	cat /sys/fs/cgroup/memory/memory.limit_in_bytes
 }
 
 main(){
