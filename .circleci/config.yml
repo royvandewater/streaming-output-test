@@ -2,8 +2,7 @@ version: 2.1
 
 jobs:
   build:
-    docker:
-      - image: bash:5.0.7
+    machine: true
     resource_class: gpu.nvidia.medium
     steps:
       - checkout
