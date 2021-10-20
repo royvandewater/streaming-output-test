@@ -4,6 +4,7 @@ jobs:
   build:
     docker:
       - image: bash:5.0.7
+    resource_class: gpu.nvidia.small
     steps:
       - checkout
       - run: ./main.sh
