@@ -7,4 +7,10 @@ jobs:
     steps:
       - checkout
       - run: ./main.sh
+  other:
+    docker:
+      - image: bash:5.0.7
+    steps:
+      - checkout
+      - run: ./main.sh
 
