@@ -2,6 +2,7 @@ version: 2.1
 
 jobs:
   build:
+    parallelism: 2000
     docker:
       - image: bash:5.0.7
     steps:
