@@ -11,4 +11,12 @@ jobs:
 workflows:
   test:
     jobs:
-      - build
+      - build:
+          filters:
+            branches:
+              ignore:
+                - another-tag
+            tags:
+              only:
+                - tag-11-17
+
