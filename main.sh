@@ -2,14 +2,10 @@
 
 set -e -o pipefail
 
-get_mem_total() {
-	cat /sys/fs/cgroup/memory/memory.limit_in_bytes
-}
-
 main(){
-	local mem_total
-	mem_total="$(get_mem_total)"
-        echo "mem_total=$mem_total"
-	return "$(($mem_total > 6442450944))" # More than 6GB
+	for i in $(seq 0 300); do
+		echo "$i"
+		sleep 1
+	done
 }
 main "$@"
