@@ -3,7 +3,7 @@
 set -e -o pipefail
 
 main(){
-	for i in $(seq 0 300); do
+	for i in $(seq 0 600); do
 		echo "$i"
 		sleep 1
 	done
