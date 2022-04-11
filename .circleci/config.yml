@@ -1,12 +1,16 @@
 version: 2.1
 
-jobs:
-  build:
+definitions:
+  do-build: &do-build
     docker:
       - image: bash:5.0.7
     steps:
       - checkout
       - run: ./main.sh
+
+
+jobs:
+  build: *do-build
 
 workflows:
   test:
