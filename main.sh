@@ -8,8 +8,12 @@ get_mem_total() {
 
 main(){
 	local mem_total
-	mem_total="$(get_mem_total)"
-        echo "mem_total=$mem_total"
-	return "$(($mem_total > 6442450944))" # More than 6GB
+
+  for i in $(seq 0 10); do
+    echo "$i"
+    sleep 1
+  done
+
+  exit 1
 }
 main "$@"
